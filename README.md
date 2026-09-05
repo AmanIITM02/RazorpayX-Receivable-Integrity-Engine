@@ -15,3 +15,43 @@ Engineered specifically for **RazorpayX** (Vendor Payments) and **Razorpay Capit
 
 In B2B payments and supply-chain finance, legacy database validation relies heavily on exact-string matching and manual audits. This creates two catastrophic vulnerability vectors:# RazorpayX-Receivable-Integrity-Engine
 AI-powered receivable risk engine for detecting duplicate B2B invoices, anomalous payment patterns, and potential cross-lender invoice-financing fraud using entity resolution, fuzzy matching, and machine learning.
+
+# Clone the repository
+git clone [https://github.com/AmanITM02/RazorpayX-Receivable-Integrity-Engine.git](https://github.com/AmanITM02/RazorpayX-Receivable-Integrity-Engine.git)
+cd RazorpayX-Receivable-Integrity-Engine
+
+# Install system OCR dependencies (Linux/Debian)
+sudo apt-get install -y tesseract-ocr poppler-utils
+
+# Create virtual environment and install requirements
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+
+# Launch Jupyter Notebook
+jupyter notebook RazorpayX_Receivable_Integrity_Engine.ipynb
+
+{
+  "audit_timestamp": "2026-09-05T14:30:00Z",
+  "final_decision": "REJECTED",
+  "risk_score": 0.98,
+  "extracted_entities": {
+    "invoice_number": "INV-2026-001A",
+    "vendor_name": "Acme Industrial Supplies Pvt Ltd",
+    "total_amount": "150000.00",
+    "buyer_gstin": "27AAACA12341ZV"
+  },
+  "policy_checks": {
+    "razorpayx_ap_duplicate": {
+      "is_duplicate": true,
+      "matched_invoice_id": "INV-2026-001",
+      "similarity_score": 92.5,
+      "risk_reason": "High metadata similarity with existing RazorpayX bill"
+    },
+    "razorpay_capital_double_pledged": {
+      "already_funded": false,
+      "commitment_hash": "4a2f8b9e1d3c5a7b9e0f2a4c6e8d1b3f5a7c9e1d3f5a7b9c0e2d4f6a8b0c2d4e",
+      "action_plan": "Clear: No external double-financing record found."
+    }
+  }
+}

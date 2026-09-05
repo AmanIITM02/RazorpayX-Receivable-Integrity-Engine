@@ -13,8 +13,7 @@ Engineered specifically for **RazorpayX** (Vendor Payments) and **Razorpay Capit
 
 ## 📌 Executive Summary & Problem Statement
 
-In B2B payments and supply-chain finance, legacy database validation relies heavily on exact-string matching and manual audits. This creates two catastrophic vulnerability vectors:# RazorpayX-Receivable-Integrity-Engine
-AI-powered receivable risk engine for detecting duplicate B2B invoices, anomalous payment patterns, and potential cross-lender invoice-financing fraud using entity resolution, fuzzy matching, and machine learning.
+In B2B payments and supply-chain finance, legacy database validation relies heavily on exact-string matching and manual audits. This creates two catastrophic vulnerability vectors:
 
 # Clone the repository
 git clone [https://github.com/AmanITM02/RazorpayX-Receivable-Integrity-Engine.git](https://github.com/AmanITM02/RazorpayX-Receivable-Integrity-Engine.git)
@@ -55,3 +54,4 @@ jupyter notebook RazorpayX_Receivable_Integrity_Engine.ipynb
     }
   }
 }
+
